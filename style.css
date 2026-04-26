@@ -182,7 +182,6 @@ body {
     position: relative;
     right: -40px;
     bottom: -10px;
-    animation: floatImage 5s ease-in-out infinite alternate;
 }
 
 /* Floating Animation */
@@ -213,7 +212,7 @@ body {
         transparent 70%
     );
 
-    animation: pulseRing 6s ease-in-out infinite alternate;
+   
     z-index: 0;
 }
 
