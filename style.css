@@ -468,7 +468,7 @@ body {
     justify-content: flex-start;
 
     padding: 30px 20px 0;
-    min-height: 320px;
+    min-height: 300px;
 
     position: relative;
 }
@@ -724,7 +724,7 @@ body {
     }
 
     .hero-right img {
-        width: 240px;
+        width: 260px;
         border-radius: -15px;
     }
 
