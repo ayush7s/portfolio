@@ -547,9 +547,9 @@ body {
     /* BUTTON */
     .btn {
         width: 100%;
-        max-width: 280px;
+        max-width: 220px;
         margin-top: 15px;
-        padding: 12px 28px;
+        padding: 10px 15px;
         font-size: 14px;
     }
 
