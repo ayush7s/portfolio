@@ -390,16 +390,26 @@ body {
 
 .projects-section{
     width: 100%;
-    padding: 120px 10%;
+    padding: 80px 20px;
     background: transparent;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .section-title{
     text-align: center;
-    font-size: 3rem;
-    margin-bottom: 100px;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
     font-weight: 700;
+    width: 100%;
+}
+
+.projects-slider{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 /* PROJECT CARD */
@@ -408,24 +418,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 70px;
-
-    margin-bottom: 120px;
-
+    gap: 50px;
+    margin-bottom: 80px;
     background: rgba(255,255,255,0.03);
-
     border: 1px solid rgba(255,255,255,0.06);
-
-    border-radius: 40px;
-
-    padding: 70px;
-
+    border-radius: 30px;
+    padding: 50px;
     backdrop-filter: blur(20px);
-
     overflow: hidden;
-
     position: relative;
-
     transition: 0.4s ease;
 }
 
@@ -453,24 +454,24 @@ body {
 }
 
 .project-content h1{
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 1.1;
-    margin-top: 20px;
-    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 .project-subtitle{
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     color: #8aa0c7;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .project-description{
-    font-size: 1.1rem;
-    line-height: 1.9;
+    font-size: 0.95rem;
+    line-height: 1.7;
     color: #d6d9e0;
-    max-width: 650px;
-    margin-bottom: 45px;
+    max-width: 550px;
+    margin-bottom: 35px;
 }
 
 /* FEATURES */
@@ -573,13 +574,9 @@ body {
 
 .project-image img{
     width: 100%;
-
-    max-width: 600px;
-
-    border-radius: 30px;
-
+    max-width: 400px;
+    border-radius: 20px;
     object-fit: cover;
-
     transition: 0.4s ease;
 }
 
@@ -594,21 +591,31 @@ body {
     .project-showcase{
         flex-direction: column;
 
-        padding: 40px 25px;
+        padding: 35px 20px;
 
-        gap: 40px;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    .projects-section {
+        padding: 60px 15px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
     }
 
     .project-content h1{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .project-subtitle{
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .project-description{
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .project-buttons{
@@ -616,7 +623,7 @@ body {
     }
 
     .project-image img{
-        max-width: 100%;
+        max-width: 300px;
     }
 }
 
@@ -689,6 +696,7 @@ body {
         margin-top: 10px;
     }
 }
+
 
 /* ================= TABLET & MOBILE (768px and below) ================= */
 @media (max-width: 768px) {
@@ -848,6 +856,41 @@ body {
     .section h2 {
         font-size: 24px;
         margin-bottom: 25px;
+    }
+
+    /* PROJECTS SECTION - MOBILE */
+    .projects-section {
+        padding: 50px 15px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+
+    .project-showcase {
+        padding: 25px 15px;
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+
+    .project-content h1 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+    }
+
+    .project-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+
+    .project-description {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+
+    .project-image img {
+        max-width: 250px;
     }
 
     /* CARDS */
@@ -1010,6 +1053,45 @@ body {
         padding: 30px 12px;
     }
 
+    .section h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .projects-section {
+        padding: 40px 12px;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 25px;
+    }
+
+    .project-showcase {
+        padding: 20px 12px;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .project-content h1 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .project-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .project-description {
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+    }
+
+    .project-image img {
+        max-width: 200px;
+    }
+
     .card {
         padding: 10px;
         margin: 10px 0;
@@ -1049,4 +1131,139 @@ body {
 /* Desktop Nav Hidden by Default */
 .mobile-nav {
     display: none;
+}
+/* =========================================
+   PROJECT SLIDER FIX
+========================================= */
+
+.projects-section{
+    overflow: hidden;
+    position: relative;
+}
+
+.projects-slider{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* EACH PROJECT */
+
+.project-showcase{
+    display: none;
+    animation: fadeSlide 0.8s ease;
+}
+
+/* ACTIVE PROJECT */
+
+.project-showcase.active{
+    display: flex;
+}
+
+/* ANIMATION */
+
+@keyframes fadeSlide{
+
+    from{
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+/* DOTS */
+
+/* =========================================
+   PREMIUM SLIDER PROGRESS DOTS
+========================================= */
+
+.slider-dots{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-top: 35px;
+
+}
+
+.slider-dot{
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.25);
+
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: 0.4s ease;
+
+}
+
+/* ACTIVE DOT BECOMES LINE */
+
+.slider-dot.active{
+
+    width: 70px;
+    background: rgba(255,255,255,0.12);
+
+}
+
+/* PROGRESS FILL */
+
+.slider-dot.active::before{
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #7f5cff,
+        #4db5ff
+    );
+
+    animation: progressFill 5s linear forwards;
+
+}
+
+/* ANIMATION */
+
+@keyframes progressFill{
+
+    from{
+        width: 0%;
+    }
+
+    to{
+        width: 100%;
+    }
+
+}
+/* MOBILE */
+
+@media(max-width: 992px){
+
+    .project-showcase.active{
+        flex-direction: column;
+    }
+
 }

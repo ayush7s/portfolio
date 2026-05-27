@@ -181,3 +181,98 @@ document.addEventListener("mousemove", (e) => {
 
 });
 }
+// =====================================
+// PROJECT SLIDER
+// =====================================
+
+const slides =
+document.querySelectorAll(".project-showcase");
+
+const dotsContainer =
+document.querySelector(".slider-dots");
+
+let currentSlide = 0;
+
+// CREATE DOTS
+
+slides.forEach((_, index) => {
+
+    const dot =
+    document.createElement("div");
+
+    dot.classList.add("slider-dot");
+
+    if(index === 0){
+        dot.classList.add("active");
+    }
+
+    dotsContainer.appendChild(dot);
+
+    dot.addEventListener("click", () => {
+
+        showSlide(index);
+
+    });
+
+});
+
+// SHOW SLIDE
+
+function showSlide(index){
+
+    slides.forEach(slide => {
+        slide.classList.remove("active");
+    });
+
+    document
+    .querySelectorAll(".slider-dot")
+    .forEach(dot => {
+        dot.classList.remove("active");
+    });
+
+    slides[index].classList.add("active");
+
+    document
+    .querySelectorAll(".slider-dot")[index]
+    .classList.add("active");
+
+    currentSlide = index;
+    resetProgressAnimation();
+
+}
+
+// FIRST SLIDE
+
+showSlide(0);
+
+// AUTO CHANGE EVERY 5 SEC
+
+setInterval(() => {
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
+
+    showSlide(currentSlide);
+
+}, 5000);
+// RESET ANIMATION WHEN CHANGING
+
+function resetProgressAnimation(){
+
+    const activeDot =
+    document.querySelector(".slider-dot.active");
+
+    if(activeDot){
+
+        activeDot.style.animation = "none";
+
+        void activeDot.offsetWidth;
+
+        activeDot.style.animation = "";
+
+    }
+
+}
