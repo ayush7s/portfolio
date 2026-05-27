@@ -1,40 +1,91 @@
 // ===== Smooth Scroll =====
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
     anchor.addEventListener('click', function(e) {
+
+        const targetId = this.getAttribute('href');
+
+        if(targetId === "#") return;
+
         e.preventDefault();
 
-        document.querySelector(this.getAttribute('href'))
-            .scrollIntoView({
+        const target =
+        document.querySelector(targetId);
+
+        if(target){
+
+            target.scrollIntoView({
                 behavior: 'smooth'
             });
-    });
-});
 
+        }
+
+    });
+
+});
+const toggleBtn = document.getElementById("theme-toggle");
+
+toggleBtn.addEventListener("click", () => {
+
+    document.body.classList.toggle("light-mode");
+
+    const icon = toggleBtn.querySelector("i");
+
+    if(document.body.classList.contains("light-mode")) {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+    } else {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+    }
+
+});
 
 // ===== Active Navbar Highlight =====
 const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-links a");
+const navLinks = document.querySelectorAll(".nav-pill a, .mobile-nav a");
 
 window.addEventListener("scroll", () => {
+
     let current = "";
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.clientHeight;
 
-        if (pageYOffset >= sectionTop) {
+        const sectionTop =
+        section.offsetTop - 150;
+
+        const sectionHeight =
+        section.offsetHeight;
+
+        if(
+            window.scrollY >= sectionTop &&
+            window.scrollY <
+            sectionTop + sectionHeight
+        ){
+
             current = section.getAttribute("id");
+
         }
+
     });
 
     navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href").includes(current)) {
-            link.classList.add("active");
-        }
-    });
-});
 
+        link.classList.remove("active");
+
+        if(
+            link.getAttribute("href")
+            .includes(current)
+        ){
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
 
 // ===== Scroll Reveal Animation =====
 const observer = new IntersectionObserver(entries => {
@@ -45,37 +96,88 @@ const observer = new IntersectionObserver(entries => {
     });
 }, { threshold: 0.15 });
 
-document.querySelectorAll(".card, .section h2, .skill").forEach(el => {
+document.querySelectorAll(
+".project-showcase, .section h2, .skill"
+).forEach(el => {
     el.classList.add("hidden");
     observer.observe(el);
 });
+// ===== Typing Effect =====
 
+const typingElement =
+document.querySelector(".typing-text");
 
-// ===== Parallax Effect (Hero Section) =====
-window.addEventListener("scroll", () => {
-    const hero = document.querySelector(".hero");
-    let offset = window.scrollY;
-    hero.style.transform = `translateY(${offset * 0.2}px)`;
-});
+const words = [
+    "AI & Software Developer",
+    "Machine Learning Enthusiast",
+    "Building Real-World AI Products"
+];
 
+let wordIndex = 0;
+let charIndex = 0;
 
-// ===== Typewriter Effect =====
-const text = "AI & Software Developer";
-let index = 0;
-const speed = 70;
+function type(){
+    if(!typingElement) return;
 
-function typeEffect() {
-    const element = document.querySelector(".hero p");
-    if (index < text.length) {
-        element.textContent += text.charAt(index);
-        index++;
-        setTimeout(typeEffect, speed);
+    if(charIndex < words[wordIndex].length){
+
+        typingElement.textContent +=
+        words[wordIndex].charAt(charIndex);
+
+        charIndex++;
+
+        setTimeout(type, 70);
+
+    }else{
+
+        setTimeout(erase, 1500);
+
     }
+
 }
 
-// Clear existing text and start typing
-window.addEventListener("load", () => {
-    const element = document.querySelector(".hero p");
-    element.textContent = "";
-    typeEffect();
+function erase(){
+
+    if(charIndex > 0){
+
+        typingElement.textContent =
+        words[wordIndex].substring(0, charIndex - 1);
+
+        charIndex--;
+
+        setTimeout(erase, 40);
+
+    }else{
+
+        wordIndex++;
+
+        if(wordIndex >= words.length){
+            wordIndex = 0;
+        }
+
+        setTimeout(type, 400);
+
+    }
+
+}
+
+window.addEventListener("load", type);
+if(window.innerWidth > 768){
+
+document.addEventListener("mousemove", (e) => { 
+
+    const x = e.clientX;
+    const y = e.clientY;
+
+    document.documentElement.style.setProperty(
+        "--mouse-x",
+        `${x}px`
+    );
+
+    document.documentElement.style.setProperty(
+        "--mouse-y",
+        `${y}px`
+    );
+
 });
+}
