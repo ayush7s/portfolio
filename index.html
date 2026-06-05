@@ -10,50 +10,75 @@
 </head>
 <body>
 
-<nav class="navbar">
-    <div class="logo">Ayush Das</div>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Ayush Das</div>
 
-    <div class="nav-pill">
-        <a href="#home" class="active"><i class="fas fa-home"></i></a>
-        <a href="#about"><i class="fas fa-user"></i></a>
-        <a href="#projects"><i class="fas fa-briefcase"></i></a>
-        <a href="#skills"><i class="fas fa-code"></i></a>
-        <a href="#contact"><i class="fas fa-envelope"></i></a>
-    </div>
+        <div class="nav-pill">
+            <a href="#home" class="active"><i class="fas fa-home"></i></a>
+            <a href="#about"><i class="fas fa-user"></i></a>
+            <a href="#projects"><i class="fas fa-briefcase"></i></a>
+            <a href="#skills"><i class="fas fa-code"></i></a>
+            <a href="#contact"><i class="fas fa-envelope"></i></a>
+        </div>
 
-<a href="#" id="theme-toggle">
-    <i class="fas fa-moon"></i>
-</a>
-</nav>
+        <a href="#" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </a>
+    </nav>
 
     <!-- Hero Section -->
-<!-- Cleaned-up Hero Section with Single-Level Layout Architecture -->
-<header class="hero" id="home">
-    <div class="hero-wrapper">
-        <!-- Left Side: Identity -->
-        <div class="hero-left">
-            <span class="hero-tagline">Hello, I'm</span>
-            <h1 class="main-name">Ayush<br>Das</h1>
-        </div>
+    <header class="hero" id="home">
+        <div class="hero-wrapper">
+            <!-- Vertical Social Dock -->
+            <div class="hero-socials">
+                <a href="https://www.linkedin.com/in/ayushdas-aiml" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/ayush7s" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.facebook.com/ayush.aiml7s" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/Ayush35037184" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <!-- FIXED: Updated with standard FontAwesome icon classes so it loads perfectly -->
+                <a href="#" target="_blank" aria-label="LeetCode">
+                    <i class="fa-solid fa-code"></i>
+                </a>
+                <a href="#" target="_blank" aria-label="Rankings/Extra">
+                    <i class="fas fa-shield-alt"></i>
+                </a>
+                <div class="socials-line"></div>
+            </div>
 
-        <!-- Center Side: The Multi-Layer Organic Graphic Frame -->
-        <div class="hero-center">
-            <div class="hero-glow"></div>
-            <!-- Secondary Decorative Backdrop Blob -->
-            <div class="profile-shape-backdrop"></div>
-            <!-- Primary Profile Image Blob -->
-            <div class="profile-shape">
-                <img src="image1.png" alt="Ayush Das">
+            <!-- Left Side: Identity -->
+            <div class="hero-left">
+                <span class="hero-tagline">Hello, I'm</span>
+                <h1 class="main-name">Ayush<br>Das</h1>
+            </div>
+
+            <!-- Center Side: The Multi-Layer Organic Graphic Frame -->
+            <div class="hero-center">
+                <div class="hero-glow"></div>
+                <!-- Secondary Decorative Backdrop Blob -->
+                <div class="profile-shape-backdrop"></div>
+                <!-- Primary Profile Image Blob -->
+                <div class="profile-shape">
+                    <img src="image1.png" alt="Ayush Das">
+                </div>
+            </div>
+
+            <!-- Right Side: Expertise Stack -->
+            <div class="hero-right-content">
+                <span class="hero-tagline">AI Engineer</span>
+                <h2 class="main-title">Developer<br>&<br>Researcher</h2>
             </div>
         </div>
+    </header>
 
-        <!-- Right Side: Expertise Stack -->
-        <div class="hero-right-content">
-            <span class="hero-tagline">AI Engineer</span>
-            <h2 class="main-title">Developer<br>&<br>Researcher</h2>
-        </div>
-    </div>
-</header>
     <!-- About Section -->
     <section id="about" class="section">
         <h2>About Me</h2>
@@ -68,385 +93,332 @@
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
-       
-
-    <h2 class="section-title">Featured Projects</h2>
-      <div class="projects-slider">
-    <!-- PROJECT 1 -->
-    <div class="project-showcase">
-
-        <div class="project-content">
-
-            <span class="project-label">PROJECT</span>
-
-            <h1>AI Chatbot</h1>
-
-            <p class="project-subtitle">
-                Conversational AI for mental health support
-            </p>
-
-            <p class="project-description">
-                AI-powered chatbot designed to provide intelligent and
-                empathetic responses for mental health conversations
-                with a smooth user interaction experience.
-            </p>
-
-            <div class="project-features">
-                <h4>KEY FEATURES</h4>
-
-                <ul>
-                    <li>Real-time AI responses</li>
-                    <li>Emotion-aware interaction</li>
-                    <li>Clean and responsive UI</li>
-                </ul>
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-slider">
+            
+            <!-- PROJECT 1 -->
+            <div class="project-showcase">
+                <div class="project-content">
+                    <span class="project-label">PROJECT</span>
+                    <h1>AI Chatbot</h1>
+                    <p class="project-subtitle">Conversational AI for mental health support</p>
+                    <p class="project-description">
+                        AI-powered chatbot designed to provide intelligent and
+                        empathetic responses for mental health conversations
+                        with a smooth user interaction experience.
+                    </p>
+                    <div class="project-features">
+                        <h4>KEY FEATURES</h4>
+                        <ul>
+                            <li>Real-time AI responses</li>
+                            <li>Emotion-aware interaction</li>
+                            <li>Clean and responsive UI</li>
+                        </ul>
+                    </div>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>AI</span>
+                        <span>Machine Learning</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/ayush7s/SOLIVANA" target="_blank" class="project-btn primary-btn">View Code</a>
+                        <a href="#contact" class="project-btn secondary-btn">Let's Talk</a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="project1.png" alt="AI Chatbot">
+                </div>
             </div>
 
-            <div class="project-tags">
-                <span>Python</span>
-                <span>AI</span>
-                <span>Machine Learning</span>
+            <!-- PROJECT 2 -->
+            <div class="project-showcase">
+                <div class="project-content">
+                    <span class="project-label">PROJECT</span>
+                    <h1>Indic Translator</h1>
+                    <p class="project-subtitle">AI-based multilingual translation system</p>
+                    <p class="project-description">
+                        Smart translation platform capable of converting image
+                        text and government forms into multiple Indic languages
+                        with improved accessibility.
+                    </p>
+                    <div class="project-features">
+                        <h4>KEY FEATURES</h4>
+                        <ul>
+                            <li>Image-to-text translation</li>
+                            <li>Indic language support</li>
+                            <li>Government form translation</li>
+                        </ul>
+                    </div>
+                    <div class="project-tags">
+                        <span>OCR</span>
+                        <span>Machine Learning</span>
+                        <span>Python</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="#" target="_blank" class="project-btn primary-btn">View Code</a>
+                        <a href="#contact" class="project-btn secondary-btn">Let's Talk</a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="project2.png" alt="Indic Translator">
+                </div>
             </div>
 
-            <div class="project-buttons">
-                <a href="https://github.com/ayush7s/SOLIVANA" target="_blank" class="project-btn primary-btn">
-                    View Code
-                </a>
-
-                <a href="#contact" class="project-btn secondary-btn">
-                    Let's Talk
-                </a>
+            <!-- PROJECT 3 -->
+            <div class="project-showcase">
+                <div class="project-content">
+                    <span class="project-label">PROJECT</span>
+                    <h1>School Management System</h1>
+                    <p class="project-subtitle">Complete digital school management platform</p>
+                    <p class="project-description">
+                        Web-based management application for handling student
+                        records, attendance, administration, and academic
+                        workflows efficiently.
+                    </p>
+                    <div class="project-features">
+                        <h4>KEY FEATURES</h4>
+                        <ul>
+                            <li>Student record management</li>
+                            <li>Attendance tracking</li>
+                            <li>Admin dashboard system</li>
+                        </ul>
+                    </div>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/ayush7s/school-management-system" target="_blank" class="project-btn primary-btn">View Code</a>
+                        <a href="#contact" class="project-btn secondary-btn">Let's Talk</a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="project3.png" alt="School Management">
+                </div>
             </div>
 
-        </div>
-
-        <div class="project-image">
-            <img src="project1.png" alt="AI Chatbot">
-        </div>
-
-    </div>
-
-    <!-- PROJECT 2 -->
-    <div class="project-showcase">
-
-        <div class="project-content">
-
-            <span class="project-label">PROJECT</span>
-
-            <h1>Indic Translator</h1>
-
-            <p class="project-subtitle">
-                AI-based multilingual translation system
-            </p>
-
-            <p class="project-description">
-                Smart translation platform capable of converting image
-                text and government forms into multiple Indic languages
-                with improved accessibility.
-            </p>
-
-            <div class="project-features">
-                <h4>KEY FEATURES</h4>
-
-                <ul>
-                    <li>Image-to-text translation</li>
-                    <li>Indic language support</li>
-                    <li>Government form translation</li>
-                </ul>
+            <!-- PROJECT 4 -->
+            <div class="project-showcase">
+                <div class="project-content">
+                    <span class="project-label">PROJECT</span>
+                    <h1>Smart Canteen Management</h1>
+                    <p class="project-subtitle">Smart online canteen ordering platform</p>
+                    <p class="project-description">
+                        Digital canteen system for managing food orders,
+                        inventory, order status, and customer interaction
+                        through an efficient dashboard.
+                    </p>
+                    <div class="project-features">
+                        <h4>KEY FEATURES</h4>
+                        <ul>
+                            <li>Real-time order tracking</li>
+                            <li>Inventory management</li>
+                            <li>Customer dashboard</li>
+                        </ul>
+                    </div>
+                    <div class="project-tags">
+                        <span>Supabase</span>
+                        <span>JavaScript</span>
+                        <span>Database</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/sristiray7/smartcanteen" target="_blank" class="project-btn primary-btn">View Code</a>
+                        <a href="#contact" class="project-btn secondary-btn">Let's Talk</a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="project4.png" alt="Smart Canteen">
+                </div>
             </div>
 
-            <div class="project-tags">
-                <span>OCR</span>
-                <span>Machine Learning</span>
-                <span>Python</span>
+            <!-- PROJECT 5 -->
+            <div class="project-showcase">
+                <div class="project-content">
+                    <span class="project-label">PROJECT</span>
+                    <h1>Loan Predictor</h1>
+                    <p class="project-subtitle">ML-powered loan eligibility prediction</p>
+                    <p class="project-description">
+                        Predictive machine learning application that analyzes
+                        user financial data to determine loan eligibility
+                        accurately and efficiently.
+                    </p>
+                    <div class="project-features">
+                        <h4>KEY FEATURES</h4>
+                        <ul>
+                            <li>Loan eligibility prediction</li>
+                            <li>Data preprocessing</li>
+                            <li>Machine learning model integration</li>
+                        </ul>
+                    </div>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Machine Learning</span>
+                        <span>Pandas</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/ayush7s/loanpredictorr" target="_blank" class="project-btn primary-btn">View Code</a>
+                        <a href="#contact" class="project-btn secondary-btn">Let's Talk</a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="project5.png" alt="Loan Predictor">
+                </div>
             </div>
 
-            <div class="project-buttons">
-                <a href="#" target="_blank" class="project-btn primary-btn">
-                    View Code
-                </a>
-
-                <a href="#contact" class="project-btn secondary-btn">
-                    Let's Talk
-                </a>
-            </div>
-
-        </div>
-
-        <div class="project-image">
-            <img src="project2.png" alt="Indic Translator">
-        </div>
-
-    </div>
-
-    <!-- PROJECT 3 -->
-    <div class="project-showcase">
-
-        <div class="project-content">
-
-            <span class="project-label">PROJECT</span>
-
-            <h1>School Management System</h1>
-
-            <p class="project-subtitle">
-                Complete digital school management platform
-            </p>
-
-            <p class="project-description">
-                Web-based management application for handling student
-                records, attendance, administration, and academic
-                workflows efficiently.
-            </p>
-
-            <div class="project-features">
-                <h4>KEY FEATURES</h4>
-
-                <ul>
-                    <li>Student record management</li>
-                    <li>Attendance tracking</li>
-                    <li>Admin dashboard system</li>
-                </ul>
-            </div>
-
-            <div class="project-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-            </div>
-
-            <div class="project-buttons">
-                <a href="https://github.com/ayush7s/school-management-system" target="_blank" class="project-btn primary-btn">
-                    View Code
-                </a>
-
-                <a href="#contact" class="project-btn secondary-btn">
-                    Let's Talk
-                </a>
-            </div>
-
-        </div>
-
-        <div class="project-image">
-            <img src="project3.png" alt="School Management">
-        </div>
-
-    </div>
-
-    <!-- PROJECT 4 -->
-    <div class="project-showcase">
-
-        <div class="project-content">
-
-            <span class="project-label">PROJECT</span>
-
-            <h1>Smart Canteen Management</h1>
-
-            <p class="project-subtitle">
-                Smart online canteen ordering platform
-            </p>
-
-            <p class="project-description">
-                Digital canteen system for managing food orders,
-                inventory, order status, and customer interaction
-                through an efficient dashboard.
-            </p>
-
-            <div class="project-features">
-                <h4>KEY FEATURES</h4>
-
-                <ul>
-                    <li>Real-time order tracking</li>
-                    <li>Inventory management</li>
-                    <li>Customer dashboard</li>
-                </ul>
-            </div>
-
-            <div class="project-tags">
-                <span>Supabase</span>
-                <span>JavaScript</span>
-                <span>Database</span>
-            </div>
-
-            <div class="project-buttons">
-                <a href="https://github.com/sristiray7/smartcanteen" target="_blank" class="project-btn primary-btn">
-                    View Code
-                </a>
-
-                <a href="#contact" class="project-btn secondary-btn">
-                    Let's Talk
-                </a>
-            </div>
-
-        </div>
-
-        <div class="project-image">
-            <img src="project4.png" alt="Smart Canteen">
-        </div>
-
-    </div>
-
-    <!-- PROJECT 5 -->
-    <div class="project-showcase">
-
-        <div class="project-content">
-
-            <span class="project-label">PROJECT</span>
-
-            <h1>Loan Predictor</h1>
-
-            <p class="project-subtitle">
-                ML-powered loan eligibility prediction
-            </p>
-
-            <p class="project-description">
-                Predictive machine learning application that analyzes
-                user financial data to determine loan eligibility
-                accurately and efficiently.
-            </p>
-
-            <div class="project-features">
-                <h4>KEY FEATURES</h4>
-
-                <ul>
-                    <li>Loan eligibility prediction</li>
-                    <li>Data preprocessing</li>
-                    <li>Machine learning model integration</li>
-                </ul>
-            </div>
-
-            <div class="project-tags">
-                <span>Python</span>
-                <span>Machine Learning</span>
-                <span>Pandas</span>
-            </div>
-
-            <div class="project-buttons">
-                <a href="https://github.com/ayush7s/loanpredictorr" target="_blank" class="project-btn primary-btn">
-                    View Code
-                </a>
-
-                <a href="#contact" class="project-btn secondary-btn">
-                    Let's Talk
-                </a>
+            <!-- PROJECT 6 -->
+            <div class="project-showcase">
+                <div class="project-content">
+                    <span class="project-label">PROJECT</span>
+                    <h1>AI Notes Summarizer</h1>
+                    <p class="project-subtitle">AI-powered study material summarizer</p>
+                    <p class="project-description">
+                        Smart AI tool capable of summarizing lecture notes,
+                        PDFs, and educational content into concise and readable
+                        study material instantly.
+                    </p>
+                    <div class="project-features">
+                        <h4>KEY FEATURES</h4>
+                        <ul>
+                            <li>AI-generated summaries</li>
+                            <li>PDF upload support</li>
+                            <li>Fast response generation</li>
+                        </ul>
+                    </div>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>AI API</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/ayush7s/Notes-summarizer" target="_blank" class="project-btn primary-btn">View Code</a>
+                        <a href="#contact" class="project-btn secondary-btn">Let's Talk</a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="project6.png" alt="AI Notes Summarizer">
+                </div>
             </div>
 
         </div>
-
-        <div class="project-image">
-            <img src="project5.png" alt="Loan Predictor">
-        </div>
-
-    </div>
-
-    <!-- PROJECT 6 -->
-    <div class="project-showcase">
-
-        <div class="project-content">
-
-            <span class="project-label">PROJECT</span>
-
-            <h1>AI Notes Summarizer</h1>
-
-            <p class="project-subtitle">
-                AI-powered study material summarizer
-            </p>
-
-            <p class="project-description">
-                Smart AI tool capable of summarizing lecture notes,
-                PDFs, and educational content into concise and readable
-                study material instantly.
-            </p>
-
-            <div class="project-features">
-                <h4>KEY FEATURES</h4>
-
-                <ul>
-                    <li>AI-generated summaries</li>
-                    <li>PDF upload support</li>
-                    <li>Fast response generation</li>
-                </ul>
-            </div>
-
-            <div class="project-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>AI API</span>
-            </div>
-
-            <div class="project-buttons">
-                <a href="https://github.com/ayush7s/Notes-summarizer" target="_blank" class="project-btn primary-btn">
-                    View Code
-                </a>
-
-                <a href="#contact" class="project-btn secondary-btn">
-                    Let's Talk
-                </a>
-            </div>
-
-        </div>
-
-        <div class="project-image">
-            <img src="project6.png" alt="AI Notes Summarizer">
-        </div>
-
-    </div>
-    </div>
-    <div class="slider-dots"></div>
-
-</section>
+        <div class="slider-dots"></div>
+    </section>
 
     <!-- Skills Section -->
     <section id="skills" class="section">
-    <h2>Skills</h2>
-
-    <div class="skills-grid">
-
-        <div class="skill-card">
-            <i class="fab fa-python"></i>
-            <h3>Python</h3>
-            <p>AI, Automation & Data Processing</p>
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fab fa-python"></i>
+                <h3>Python</h3>
+                <p>AI, Automation & Data Processing</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <h3>C Programming</h3>
+                <p>Problem Solving & Fundamentals</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-brain"></i>
+                <h3>Machine Learning</h3>
+                <p>Model Training & Prediction</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-html5"></i>
+                <h3>HTML</h3>
+                <p>Semantic Web Structure</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS</h3>
+                <p>Responsive UI Design</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+                <p>Interactive Web Applications</p>
+            </div>
         </div>
+    </section>
 
-        <div class="skill-card">
-            <i class="fas fa-code"></i>
-            <h3>C Programming</h3>
-            <p>Problem Solving & Fundamentals</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fas fa-brain"></i>
-            <h3>Machine Learning</h3>
-            <p>Model Training & Prediction</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fab fa-html5"></i>
-            <h3>HTML</h3>
-            <p>Semantic Web Structure</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fab fa-css3-alt"></i>
-            <h3>CSS</h3>
-            <p>Responsive UI Design</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fab fa-js"></i>
-            <h3>JavaScript</h3>
-            <p>Interactive Web Applications</p>
-        </div>
-
-    </div>
-</section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
+    <!-- Premium Contact Section -->
+    <!-- FIXED: Removed the dangerous default 'hidden' utility tag to verify display -->
+    <section id="contact" class="section contact-section">
         <h2>Contact</h2>
-        <div class="card">
-            <p>Email: <a href="mailto:ayush.das.9134@gmail.com" target="_blank">ayush.das.9134@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/ayushdas-aiml" target="_blank">linkedin.com/in/ayushdas-aiml</a></p>
-            <p>GitHub: <a href="https://github.com/ayush7s" target="_blank">github.com/ayush7s</a></p>
+        <div class="contact-container">
+            <!-- Left Column: Context & Core Communications -->
+            <div class="contact-info">
+                <h3>Let's collaborate on the next big thing.</h3>
+                <p>Whether you have an open opportunity, a full-stack project to build, or want to talk research engineering, my inbox is always open.</p>
+                
+                <div class="contact-details">
+                    <!-- Direct Email Card -->
+                    <a href="mailto:your.email@example.com" class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="detail-text">
+                            <span>Email Me Directly</span>
+                            <strong>your.email@example.com</strong>
+                        </div>
+                    </a>
+                    
+                    <!-- Location Panel -->
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="detail-text">
+                            <span>Based In</span>
+                            <strong>India</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Interactive Premium Social Grid -->
+            <div class="contact-grid">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/ayushdas-aiml" target="_blank" class="social-premium-card" aria-label="LinkedIn">
+                    <div class="social-header">
+                        <i class="fab fa-linkedin-in"></i>
+                        <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+                    </div>
+                    <span>LinkedIn</span>
+                    <p>Professional network & industrial connections</p>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/ayush7s" target="_blank" class="social-premium-card" aria-label="GitHub">
+                    <div class="social-header">
+                        <i class="fab fa-github"></i>
+                        <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+                    </div>
+                    <span>GitHub</span>
+                    <p>Open source repository & codebase portfolio</p>
+                </a>
+
+                <!-- X / Twitter -->
+                <a href="https://x.com/Ayush35037184" target="_blank" class="social-premium-card" aria-label="Twitter">
+                    <div class="social-header">
+                        <i class="fab fa-twitter"></i>
+                        <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+                    </div>
+                    <span>Twitter / X</span>
+                    <p>Technical updates & direct discussions</p>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/ayush.aiml7s" target="_blank" class="social-premium-card" aria-label="Facebook">
+                    <div class="social-header">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+                    </div>
+                    <span>Facebook</span>
+                    <p>Personal network & social connections</p>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -454,15 +426,17 @@
     <footer class="footer">
         <p>© 2026 Ayush Das</p>
     </footer>
-<div class="mobile-nav">
-    <a href="#home" class="active"><i class="fas fa-home"></i><span>Home</span></a>
-    <a href="#about"><i class="fas fa-user"></i><span>About</span></a>
-    <a href="#projects"><i class="fas fa-briefcase"></i><span>Projects</span></a>
-    <a href="#skills"><i class="fas fa-code"></i><span>Skills</span></a>
-    <a href="#contact"><i class="fas fa-envelope"></i><span>Contact</span></a>
-</div>
+
+    <!-- Mobile Sticky Navigation Panel -->
+    <div class="mobile-nav">
+        <a href="#home" class="active"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="#about"><i class="fas fa-user"></i><span>About</span></a>
+        <a href="#projects"><i class="fas fa-briefcase"></i><span>Projects</span></a>
+        <a href="#skills"><i class="fas fa-code"></i><span>Skills</span></a>
+        <a href="#contact"><i class="fas fa-envelope"></i><span>Contact</span></a>
+    </div>
+
     <!-- External JS -->
     <script src="script.js"></script>
-
 </body>
-</html>>
+</html>
