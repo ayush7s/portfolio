@@ -387,7 +387,102 @@ img {
     pointer-events: none;
     transition: opacity 0.3s ease;
 }
+/* ==========================================================================
+   5. COMPOSITE BLOB ENGINE (UPRIGHT OPPOSING GEOMETRY)
+   ========================================================================== */
 
+/* CONTAINER ANCHOR */
+.hero-center {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 290px;
+    height: 390px;
+    z-index: 5;
+    transition: var(--transition-smooth);
+}
+
+/* FIRST BLOB: FOREGROUND PHOTO CONTAINER 
+   (Perfect standing straight: WIDER at the top, NARROWER at the bottom) */
+.profile-shape {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+    /* Mathematical matrix for wide top / tapered bottom */
+    border-radius: 50% 40% 48% 38% / 35% 35% 65% 65%;
+    
+    background: linear-gradient(135deg, var(--profile-start), var(--profile-end));
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    
+    /* Locked perfectly straight */
+    transform: rotate(0deg);
+    transition: var(--transition-smooth);
+}
+
+/* Foreground subject image positioning */
+.profile-shape img {
+    width: 110%;
+    height: auto;
+    object-fit: cover;
+    transform: translateY(8%); /* Keeps the image down to clear the top curve */
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.3));
+}
+
+/* SECOND BLOB: BACKGROUND GLOW CONTROLLER
+   (Perfect standing straight: NARROWER at the top, WIDER at the bottom) */
+.profile-shape-backdrop {
+    position: absolute;
+    /* Expanded slightly so the edges break past the foreground shape cleanly */
+    width: 105%;
+    height: 102%;
+    top: -3%;
+    left: -3%;
+    
+    /* Exact opposite matrix: tapered top / wide base at the bottom */
+    border-radius: 38% 48% 50% 40% / 65% 55% 35% 45%;
+    
+    /* Ambient Glow Core styling */
+    background: linear-gradient(135deg, var(--profile-end), rgba(124, 58, 237, 0.2));
+    filter: blur(4px); 
+    box-shadow: 0 0 45px rgba(124, 58, 237, 0.4);
+    
+    z-index: 2;
+    opacity: 0.8;
+    
+    /* Locked perfectly straight */
+    transform: rotate(0deg);
+    transition: var(--transition-smooth);
+}
+
+/* Light Mode glow adaptation */
+body.light-mode .profile-shape-backdrop {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), transparent);
+    box-shadow: 0 0 35px rgba(99, 102, 241, 0.2);
+    opacity: 0.6;
+}
+
+
+/* ==========================================================================
+   CLEAN HOVER INTERACTION (ZERO ROTATION MECHANICS)
+   ========================================================================== */
+/* Recreates premium micro-scaling depth, but blocks any tilting or spinning */
+
+.hero-wrapper:hover .profile-shape {
+    transform: scale(1.02); 
+}
+
+.hero-wrapper:hover .profile-shape-backdrop {
+    transform: scale(1.04); 
+    opacity: 1;
+    filter: blur(2px); 
+}
 /* ==========================================================================
    LIGHT MODE GLOW TREAD COMPENSATION
    ========================================================================== */
