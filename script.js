@@ -43,8 +43,11 @@ toggleBtn.addEventListener("click", () => {
 });
 
 // ===== Active Navbar Highlight =====
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-pill a, .mobile-nav a");
+const sections =
+document.querySelectorAll("header[id], section[id]");
+
+const navLinks =
+document.querySelectorAll(".nav-pill a, .mobile-nav a");
 
 window.addEventListener("scroll", () => {
 
@@ -52,20 +55,14 @@ window.addEventListener("scroll", () => {
 
     sections.forEach(section => {
 
-        const sectionTop =
-        section.offsetTop - 150;
+        const sectionTop = section.offsetTop - 250;
+        const sectionHeight = section.offsetHeight;
 
-        const sectionHeight =
-        section.offsetHeight;
-
-        if(
+        if (
             window.scrollY >= sectionTop &&
-            window.scrollY <
-            sectionTop + sectionHeight
-        ){
-
-            current = section.getAttribute("id");
-
+            window.scrollY < sectionTop + sectionHeight
+        ) {
+            current = section.id;
         }
 
     });
@@ -74,19 +71,13 @@ window.addEventListener("scroll", () => {
 
         link.classList.remove("active");
 
-        if(
-            link.getAttribute("href")
-            .includes(current)
-        ){
-
+        if(link.getAttribute("href") === "#" + current){
             link.classList.add("active");
-
         }
 
     });
 
 });
-
 // ===== Scroll Reveal Animation =====
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -97,7 +88,7 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.15 });
 
 document.querySelectorAll(
-".project-showcase, .section h2, .skill"
+".project-showcase, .section h2, .skill-card"
 ).forEach(el => {
     el.classList.add("hidden");
     observer.observe(el);
@@ -190,31 +181,32 @@ document.querySelectorAll(".project-showcase");
 
 const dotsContainer =
 document.querySelector(".slider-dots");
+if(dotsContainer){
 
+    slides.forEach((_, index) => {
+
+        const dot = document.createElement("div");
+
+        dot.classList.add("slider-dot");
+
+        if(index === 0){
+            dot.classList.add("active");
+        }
+
+        dotsContainer.appendChild(dot);
+
+        dot.addEventListener("click", () => {
+            showSlide(index);
+        });
+
+    });
+
+}
 let currentSlide = 0;
 
 // CREATE DOTS
 
-slides.forEach((_, index) => {
 
-    const dot =
-    document.createElement("div");
-
-    dot.classList.add("slider-dot");
-
-    if(index === 0){
-        dot.classList.add("active");
-    }
-
-    dotsContainer.appendChild(dot);
-
-    dot.addEventListener("click", () => {
-
-        showSlide(index);
-
-    });
-
-});
 
 // SHOW SLIDE
 
@@ -276,3 +268,22 @@ function resetProgressAnimation(){
     }
 
 }
+window.addEventListener("scroll", () => {
+
+    if (
+        window.innerHeight + window.scrollY >=
+        document.body.offsetHeight - 20
+    ) {
+
+        navLinks.forEach(link =>
+            link.classList.remove("active")
+        );
+
+        document
+            .querySelector('a[href="#contact"]')
+            ?.classList.add("active");
+
+        return;
+    }
+
+});
