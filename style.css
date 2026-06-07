@@ -1084,7 +1084,7 @@ body.light-mode .socials-line {
 .case-studies-container {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 4rem;
 }
 
 .case-study-card {
@@ -1096,6 +1096,7 @@ body.light-mode .socials-line {
     display: flex;
     flex-direction: column;
     position: relative;
+    gap: 1.5rem;
 }
 
 /* Header Stack */
@@ -1150,10 +1151,9 @@ body.light-mode .socials-line {
     max-width: 90%;
 }
 
-/* Architectural Breakdown Columns */
 .cs-breakdown {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
@@ -1161,6 +1161,12 @@ body.light-mode .socials-line {
     margin-bottom: 2rem;
 }
 
+/* This makes every child container take up roughly half the space, 
+   but expand smoothly if it's the lone item on a new row */
+.cs-breakdown > div {
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 280px; /* Ensures it looks beautiful and stacks perfectly on mobile automatically */
+}
 .cs-phase h4 {
     display: flex;
     align-items: center;
@@ -1190,8 +1196,10 @@ body.light-mode .socials-line {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    
     margin-top: auto;
+    gap: 1.5rem 1rem; /* Added row-gap (1.5rem) so tags don't overlap if they wrap on mobile */
+    margin-top: 1.5rem;
 }
 
 .cs-tech-stack {
@@ -1243,6 +1251,80 @@ body.light-mode .socials-line {
 
 .case-study-card:hover .cs-read-btn i {
     transform: translateX(5px);
+}
+/* Slider Layout Engine overrides */
+.cs-slider-viewport {
+    width: 100%;
+    overflow: hidden; /* Clips cards sitting outside visual focus */
+    position: relative;
+    padding: 1rem 0;
+}
+
+.case-studies-container {
+    display: flex;
+    flex-direction: row; /* Arranges case studies in a continuous row */
+    gap: 0; /* Let width management handle spacing */
+    transition: transform var(--transition-smooth);
+    will-change: transform;
+}
+
+.case-study-card {
+    flex: 0 0 100%; /* Guarantees exactly one card fills the viewport frame at a time */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Controls Header Sub-Rack */
+.cs-slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cs-arrow-btn {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.cs-arrow-btn:hover {
+    background: var(--bg-surface-hover);
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: scale(1.05);
+}
+
+/* Status Navigation Dots */
+.cs-slider-dots {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.cs-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border-color);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.cs-dot.active {
+    background: var(--accent);
+    width: 24px; /* Premium stretched active layout */
+    border-radius: 4px;
 }
 
 /* Responsive Scaling Overrides */

@@ -410,89 +410,192 @@
 
         </div>
     </section>
-    <!-- ==========================================================================
-         CASE STUDIES SECTION
-         ========================================================================== -->
-    <section id="case-studies" class="section case-studies-section">
+<section id="case-studies" class="section case-studies-section">
         <h2 class="section-title">Engineering Case Studies</h2>
         <p class="section-subtitle-text">A deep dive into complex architectural breakdowns, problem-solving methodologies, and system impacts.</p>
         
-        <div class="case-studies-container">
+        <div class="cs-slider-viewport">
+            <div class="case-studies-container">
             
-            <!-- CASE STUDY 1 -->
-            <article class="case-study-card">
-                <div class="cs-header">
-    <span class="cs-tag">System Architecture & AI</span>
-    <div class="cs-metrics">
-        <span class="metric-badge"><i class="fa-solid fa-bolt"></i> 40% Latency Reduction</span>
-    </div>
-</div>
-
-<h3 class="cs-title">Optimizing High-Throughput Text Extraction for an AI Notes Summarizer</h3>
-
-<p class="cs-summary">
-    An in-depth breakdown of engineering a full-stack summarization platform designed to ingest dense academic lecture notes and output context-aware, simplified study guides instantly.
-</p>
-
-<div class="cs-breakdown">
-    <div class="cs-phase">
-        <h4><i class="fa-solid fa-triangle-exclamation"></i> The Challenge</h4>
-        <p>Standard LLM integrations suffer from severe latency and API timeouts when extracting massive text volumes. Processing raw, large-scale PDFs directly through generative models introduces high token costs and inefficient token utilization, making real-time interactive summary generation a challenge.</p>
-    </div>
-    <div class="cs-phase">
-        <h4><i class="fa-solid fa-gears"></i> The Solution</h4>
-        <p>Architected an asynchronous text preprocessing pipeline utilizing a Python and Flask backend. By implementing intelligent text chunking prior to hitting the Grok API layer, the system efficiently handles data payloads—delivering concise, core-concept summaries paired with 5 targeted, high-yield Q&As for rapid comprehension.</p>
-    </div>
-</div>
-
-<div class="cs-footer">
-    <div class="cs-tech-stack">
-        <span>Python</span>
-        <span>Flask</span>
-        <span>Grok API</span>
-        <span>Asynchronous I/O</span>
-    </div>
-    
-
-</div>
-
-            <!-- CASE STUDY 2 -->
-            <article class="case-study-card">
-                <div class="cs-header">
-                    <span class="cs-tag">Academic Integrity Systems</span>
-                    <div class="cs-metrics">
-                        <span class="metric-badge"><i class="fa-solid fa-shield-halved"></i> 94% Validation Accuracy</span>
+                <article class="case-study-card">
+                    <div class="cs-header">
+                        <span class="cs-tag">System Architecture & AI</span>
+                        <div class="cs-metrics">
+                            <span class="metric-badge"><i class="fa-solid fa-bolt"></i> 40% Latency Reduction</span>
+                        </div>
                     </div>
-                </div>
-                
-                <h3 class="cs-title">Building an Authenticity Validator Engine for Scholastic Ecosystems</h3>
-                
-                <p class="cs-summary">
-                    Designing and deploying a robust multi-layered verification framework during a fast-paced team hackathon to detect and flag structural anomalies in academic data submissions.
-                </p>
-                
-                <div class="cs-breakdown">
-                    <div class="cs-phase">
-                        <h4><i class="fa-solid fa-triangle-exclamation"></i> The Challenge</h4>
-                        <p>Assembling an algorithm capable of authenticating documents dynamically without flagging authentic human formatting variations as false positives.</p>
+                    <h3 class="cs-title">Optimizing High-Throughput Text Extraction for an AI Notes Summarizer</h3>
+                    <p class="cs-summary">
+                        An in-depth breakdown of engineering a full-stack summarization platform designed to ingest dense academic lecture notes and output context-aware, simplified study guides instantly.
+                    </p>
+                    <div class="cs-breakdown">
+                        <div class="cs-phase">
+                            <h4><i class="fa-solid fa-triangle-exclamation"></i> The Challenge</h4>
+                            <p>Standard LLM integrations suffer from severe latency and API timeouts when extracting massive text volumes. Processing raw, large-scale PDFs directly through generative models introduces high token costs and inefficient token utilization, making real-time interactive summary generation a challenge.</p>
+                        </div>
+                        <div class="cs-phase">
+                            <h4><i class="fa-solid fa-gears"></i> The Solution</h4>
+                            <p>Architected an asynchronous text preprocessing pipeline utilizing a Python and Flask backend. By implementing intelligent text chunking prior to hitting the Grok API layer, the system efficiently handles data payloads—delivering concise, core-concept summaries paired with 5 targeted, high-yield Q&As for rapid comprehension.</p>
+                        </div>
                     </div>
-                    <div class="cs-phase">
-                        <h4><i class="fa-solid fa-gears"></i> The Solution</h4>
-                        <p>Collaborated with a cross-functional engineering group to implement localized pattern matching matrices, resulting in an end-to-end web deployment built for rapid analytical processing.</p>
+                    <div class="cs-footer">
+                        <div class="cs-tech-stack">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>Grok API</span>
+                            <span>Asynchronous I/O</span>
+                        </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="cs-footer">
-                    <div class="cs-tech-stack">
-                        <span>Machine Learning</span>
-                        <span>Pattern Matching</span>
-                        <span>Team Engineering</span>
+                <article class="case-study-card">
+                    <div class="cs-header">
+                        <span class="cs-tag">Predictive Analytics & Fintech</span>
+                        <div class="cs-metrics">
+                            <span class="metric-badge"><i class="fa-solid fa-chart-line"></i> High-Accuracy Classification</span>
+                        </div>
                     </div>
-                    
-                </div>
-            </article>
+                    <h3 class="cs-title">Developing an ML-Driven Loan Eligibility & Risk Assessment Engine</h3>
+                    <p class="cs-summary">
+                        Engineering a full-stack predictive application designed to assess credit risk and automate loan approval decisions by evaluating applicant financials, demographic profiles, and historical repayment behaviors.
+                    </p>
+                    <div class="cs-breakdown">
+                        <div class="cs-phase">
+                            <h4><i class="fa-solid fa-triangle-exclamation"></i> The Challenge</h4>
+                            <p>Transforming raw Kaggle financial datasets containing disparate features—such as property geography (rural, semiurban, urban), family sizes, credit history consistency, and asymmetric income-to-loan ratios—into clean, balanced data matrices capable of driving highly stable classification algorithms without overestimating high-risk applicants.</p>
+                        </div>
+                        <div class="cs-phase">
+                            <h4><i class="fa-solid fa-gears"></i> The Solution</h4>
+                            <p>Trained and cross-validated Logistic Regression and Decision Tree models to map complex patterns regarding a user's probability of defaulting versus maintaining proper repayment timelines. Built a clean Python and Flask backend to serve the model inferences, utilizing Supabase for secure cloud data storage, and deployed a responsive HTML/CSS/JS frontend to provide users with instantaneous evaluation feedback.</p>
+                        </div>
+                    </div>
+                    <div class="cs-footer">
+                        <div class="cs-tech-stack">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>Supabase</span>
+                            <span>Scikit-Learn</span>
+                            <span>Logistic Regression</span>
+                            <span>Decision Trees</span>
+                            <span>JavaScript</span>
+                            <span>HTML/CSS</span>
+                        </div>
+                    </div>
+                </article>
 
+                <article class="case-study-card">
+                    <div class="cs-header">
+                        <span class="cs-tag">Local AI & Conversational UX</span>
+                        <div class="cs-metrics">
+                            <span class="metric-badge"><i class="fa-solid fa-heart-pulse"></i> Guardrailed Local Inference</span>
+                        </div>
+                    </div>
+                    <h3 class="cs-title">Architecting a Privacy-Centric Companion AI Chatbot and Mental Wellness Platform</h3>
+                    <p class="cs-summary">
+                        Designing and deploying a full-stack, local-first web application featuring a compassionate AI conversational companion designed to alleviate loneliness, paired with integrated sensory wellness resources like ASMR, podcasts, and articles.
+                    </p>
+                    <div class="cs-breakdown">
+                        <div class="cs-phase">
+                            <h4><i class="fa-solid fa-triangle-exclamation"></i> The Challenge</h4>
+                            <p>Deploying conversational AI for vulnerable or lonely users introduces extreme privacy risks if hosted in the cloud, while running a local model presents safety issues regarding critical inputs. The core challenge lay in filtering out highly sensitive or debatable mental health terminology at the application layer without compromising the model's empathetic, human-like responses or causing sudden conversational breaks.</p>
+                        </div>
+                        <div class="cs-phase">
+                            <h4><i class="fa-solid fa-gears"></i> The Solution</h4>
+                            <p>Built a secure Python and Flask backend utilizing Ollama to host and run an optimized language model locally on the host machine, guaranteeing absolute user privacy. Developed an in-memory lexical filtering middleware script to intercept, evaluate, and gently redirect conversations flagged with high-risk text patterns. The responsive frontend handles a rich wellness catalog, seamlessly streaming ASMR, podcast media components, and psychoeducational blogs alongside the real-time chat dashboard.</p>
+                        </div>
+                    </div>
+                    <div class="cs-footer">
+                        <div class="cs-tech-stack">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>Ollama (Local LLM)</span>
+                            <span>Content Filtering</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case-study-card">
+                    <div class="cs-header">
+                        <span class="cs-tag">Cloud Infrastructure & B2B SaaS</span>
+                        <div class="cs-metrics">
+                            <span class="metric-badge"><i class="fa-solid fa-calculator"></i> Zero-Waiter Overhead Option</span>
+                        </div>
+                    </div>
+                    <h3 class="cs-title">Architecting an Automation-First Smart Canteen Management Ecosystem</h3>
+                    <p class="cs-summary">
+                        Designing and engineering a scalable full-stack ordering application tailored for fast-paced corporate or startup hubs to optimize operations, eradicate staff-to-client order errors, and manage micro-transactions dynamically.
+                    </p>
+                    <div class="cs-breakdown">
+                        <div class="cs-phase">
+                            <h4><i class="fa-solid fa-triangle-exclamation"></i> The Challenge</h4>
+                            <p>Traditional hospitality models suffer from high overhead expenses due to extensive waitstaff dependency and frequent order inaccuracies caused by miscommunications between waiters and clients. Transitioning to self-service requires a unified digital layer capable of tracing precise multi-table variables, calculating staggered meal-preparation/serving intervals, and unifying hybrid transaction records simultaneously without data bottlenecks.</p>
+                        </div>
+                        <div class="cs-phase">
+                            <h4><i class="fa-solid fa-gears"></i> The Solution</h4>
+                            <p>Developed an edge-integrated frontend using HTML, CSS, and modular Vanilla JavaScript that allows clients to order directly from localized tables, specifying explicit item preferences to eliminate human interpretation errors. Integrated Supabase as a real-time relational database backend to store and broadcast precise table tracking, automated billing computations, and prep-time milestones. Built a central administrative dashboard allowing kitchen operators and business managers to orchestrate all ongoing ticket queues, manage inventory, and reconcile online/offline payment gateways instantly.</p>
+                        </div>
+                    </div>
+                    <div class="cs-footer">
+                        <div class="cs-tech-stack">
+                            <span>Supabase (BaaS)</span>
+                            <span>Realtime Database</span>
+                            <span>JavaScript (ES6+)</span>
+                            <span>State Management</span>
+                            <span>Admin Analytics</span>
+                            <span>HTML/CSS</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case-study-card">
+                    <div class="cs-header">
+                        <span class="cs-tag">Management System Architecture</span>
+                        <div class="cs-metrics">
+                            <span class="metric-badge"><i class="fa-solid fa-bolt"></i> 70% Communication Efficiency</span>
+                        </div>
+                    </div>
+                    <h3 class="cs-title">Designing a Scalable System Architecture for Private School Notices & Communications</h3>
+                    <p class="cs-summary">
+                        A comprehensive case study on architecting a robust, scalable, and secure management system for handling sensitive communications and notices within a private school environment, ensuring data integrity and efficient information flow.
+                    </p>
+                    <div class="cs-breakdown">
+                        <div class="cs-phase">
+                            <h4><i class="fa-solid fa-triangle-exclamation"></i> The Challenge</h4>
+                            <p>Designing an administrative infrastructure capable of broadcasting dynamic, sensitive announcements while ensuring zero data degradation, stringent role-based access, and reliable message propagation channels across distributed student-parent-teacher segments.</p>
+                        </div>
+                        <div class="cs-phase">
+                            <h4><i class="fa-solid fa-gears"></i> The Solution</h4>
+                            <p>Implemented a highly scalable modular architecture backed by microservices patterns within a unified Python and Flask paradigm to handle isolated systemic communication processes. Leveraged Supabase for secure multi-tenant cloud storage, end-to-end relational data integrity, and strict access protocols. Deployed a responsive, highly accessible HTML/CSS/JS web dashboard to let administrators effortlessly dispatch verified notices instantly.</p>
+                        </div>
+                    </div>
+                    <div class="cs-footer">
+                        <div class="cs-tech-stack">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>Supabase</span>
+                            <span>Modular Architecture</span>
+                            <span>JavaScript</span>
+                            <span>HTML/CSS</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
         </div>
+
+        <div class="cs-slider-controls">
+            <button class="cs-arrow-btn prev-btn" aria-label="Previous Case Study">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="cs-slider-dots"></div>
+            <button class="cs-arrow-btn next-btn" aria-label="Next Case Study">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+        
     </section>
     <!-- Premium Contact Section -->
     <!-- FIXED: Removed the dangerous default 'hidden' utility tag to verify display -->
