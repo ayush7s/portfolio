@@ -422,41 +422,41 @@
             <!-- CASE STUDY 1 -->
             <article class="case-study-card">
                 <div class="cs-header">
-                    <span class="cs-tag">System Architecture & AI</span>
-                    <div class="cs-metrics">
-                        <span class="metric-badge"><i class="fa-solid fa-bolt"></i> 40% Latency Reduction</span>
-                    </div>
-                </div>
-                
-                <h3 class="cs-title">Optimizing High-Throughput Text Extraction for an AI Notes Summarizer</h3>
-                
-                <p class="cs-summary">
-                    An in-depth breakdown of engineering a full-stack summarization platform designed to ingest dense academic lecture notes and output context-aware, simplified study guides instantly.
-                </p>
-                
-                <div class="cs-breakdown">
-                    <div class="cs-phase">
-                        <h4><i class="fa-solid fa-triangle-exclamation"></i> The Challenge</h4>
-                        <p>Standard LLM API calls suffered from severe timeout issues and high token costs when processing massive.It uses free GROK API to generate summarized form of the pdf along with 5 vital questions & answers from the pdf.</p>
-                    </div>
-                    <div class="cs-phase">
-                        <h4><i class="fa-solid fa-gears"></i> The Solution</h4>
-                        <p>Architected an asynchronous text preprocessing pipeline using a Python and Flask backend to chunk data before parsing it into the generative AI layer.</p>
-                    </div>
-                </div>
+    <span class="cs-tag">System Architecture & AI</span>
+    <div class="cs-metrics">
+        <span class="metric-badge"><i class="fa-solid fa-bolt"></i> 40% Latency Reduction</span>
+    </div>
+</div>
 
-                <div class="cs-footer">
-                    <div class="cs-tech-stack">
-                        <span>Python</span>
-                        <span>Flask</span>
-                        <span>Asynchronous I/O</span>
-                    </div>
-                    <a href="#" class="cs-read-btn">
-                        <span>Read Full Breakdown</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </article>
+<h3 class="cs-title">Optimizing High-Throughput Text Extraction for an AI Notes Summarizer</h3>
+
+<p class="cs-summary">
+    An in-depth breakdown of engineering a full-stack summarization platform designed to ingest dense academic lecture notes and output context-aware, simplified study guides instantly.
+</p>
+
+<div class="cs-breakdown">
+    <div class="cs-phase">
+        <h4><i class="fa-solid fa-triangle-exclamation"></i> The Challenge</h4>
+        <p>Standard LLM integrations suffer from severe latency and API timeouts when extracting massive text volumes. Processing raw, large-scale PDFs directly through generative models introduces high token costs and inefficient token utilization, making real-time interactive summary generation a challenge.</p>
+    </div>
+    <div class="cs-phase">
+        <h4><i class="fa-solid fa-gears"></i> The Solution</h4>
+        <p>Architected an asynchronous text preprocessing pipeline utilizing a Python and Flask backend. By implementing intelligent text chunking prior to hitting the Grok API layer, the system efficiently handles data payloads—delivering concise, core-concept summaries paired with 5 targeted, high-yield Q&As for rapid comprehension.</p>
+    </div>
+</div>
+
+<div class="cs-footer">
+    <div class="cs-tech-stack">
+        <span>Python</span>
+        <span>Flask</span>
+        <span>Grok API</span>
+        <span>Asynchronous I/O</span>
+    </div>
+    <a href="#" class="cs-read-btn">
+        <span>Read Full Breakdown</span>
+        <span><i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+</div>
 
             <!-- CASE STUDY 2 -->
             <article class="case-study-card">
