@@ -938,6 +938,82 @@ body.light-mode .socials-line {
 .skill-card:hover i {
     transform: scale(1.1);
 }
+/* Tech Ticker Layout Container */
+.tech-ticker-section {
+    width: 100%;
+    padding: 3rem 0;
+    background: var(--bg-background); /* Matches your portfolio theme background */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Elegant edge-fading masks using linear gradients */
+.ticker-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
+}
+
+/* Flex track handling the continuous movement physics */
+.ticker-track {
+    display: flex;
+    white-space: nowrap;
+    gap: 3rem; /* Dynamic spacing between stack items */
+    padding-right: 3rem; /* Matches gap to ensure mathematical alignment */
+    animation: scrollInfinite 25s linear infinite;
+}
+
+/* Individual modern badge design */
+.ticker-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--text-main);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Highlight accent effect when cursor approaches elements */
+.ticker-item:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    cursor: default;
+}
+
+/* Update your existing icon rule to give them consistent formatting */
+.ticker-item i {
+    font-size: 1.5rem; /* Makes the colorful logos beautifully crisp and legible */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Keeps the text bright, allowing the icons to hold their own unique brand colors */
+.ticker-item {
+    color: var(--text-main);
+}
+
+/* Pause scroll mechanism when a viewer focuses on a tool */
+.ticker-wrapper:hover .ticker-track {
+    animation-play-state: paused;
+}
+
+/* Pure Hardware-Accelerated Animation Loop Engine */
+@keyframes scrollInfinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 /* ==========================================================================
    7. ACHIEVEMENTS & CERTIFICATIONS LAYOUT ENGINE
    ========================================================================== */
